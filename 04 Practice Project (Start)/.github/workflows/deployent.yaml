@@ -6,6 +6,10 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
       - name: install Dependencies
         run: npm ci
       - name: run Lint
